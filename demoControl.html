@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Demo Control</title>
+	<link rel="stylesheet" href="">
+	<script language="javascript">
+		function volChange() {
+			var volText = document.getElementById("vol-value");
+			var vol = document.getElementById("vol");
+			volText.value = vol.value;
+			return false;
+		}
+	function volValueChange() {
+			var volText = document.getElementById("vol-value");
+			var vol = document.getElementById("vol");
+			volText.value = vol.value;
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<h2>Demo Using Control</h2>
+	<from>
+		Search: <input type="search" name="search" placeholder="Input information"/><br/><br/>
+		StudentID: <input type="text" name="stuid" placeholder="ST000000"/><br/><br/>
+		FullName: <input type="text" name="name" placeholder="Tin Le" value="TinLDB"/><br/><br/>
+		How old are you? <input type="radio" name="age" value ="u24"> Under 24 &nbsp; &nbsp; &nbsp;
+						<input type="radio" name="age" value ="25-34"> 25 - 34 &nbsp; &nbsp; &nbsp;
+						<input type="radio" name="age" value ="35-44"> 35 - 44 &nbsp; &nbsp; &nbsp;
+						<input type="radio" name="age" value ="g44"> 45+
+			<br/><br/>
+		Birthday <input type="week"/>
+		<br/><br/>
+		Gender: <select name="gender" >
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+			<br/><br/>
+
+		What type of music do you listen to? <label><input type="checkbox" name="age" value ="punkrock" id="Punk"> Punk Rock </label>&nbsp; &nbsp; &nbsp;
+						<input type="checkbox" name="age" value ="indierock"> <label for="indie">Indie Rock </label> &nbsp; &nbsp; &nbsp;
+						<input type="checkbox" name="age" value ="hiphop"> Hip Hop &nbsp; &nbsp; &nbsp;
+						<input type="checkbox" name="age" value ="rockabilly"> Rockabilly
+			<br/><br/>
+		Password: <input type="password" name="PW" placeholder="pass"/><br/><br/>
+		Description: <textarea name="description">This is area content</textarea><br/><br/>
+		Picture <input type="file"/>
+			<br/><br/>
+		Input a number: <input type="number" name="num">
+			<br/><br/>
+  		Change volume: <input id="vol" type="range" min="0" max="100" name="vol" onchange="return volChange();"/>
+  		<input type="number" id="vol-value" onchange="return volValueChange();">
+			<br/><br/>
+		<input type="submit" name="btnOK" value="Create">
+		<input type="reset" name="Reset">
+	</from>
+</body>
+</html>
